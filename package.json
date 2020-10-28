@@ -1,0 +1,30 @@
+{
+  "name": "ra-jsdt",
+  "version": "0.0.1",
+  "description": " write code in nice way  through ra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcyStar/ra.git"
+  },
+  "keywords": [
+    "genrator",
+    "auto"
+  ],
+  "author": "gcy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "cross-env": "^3.1.4",
+    "webpack": "^2.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/gcyStar/ra/issues"
+  },
+  "homepage": "https://github.com/gcyStar/ra#readme"
+}

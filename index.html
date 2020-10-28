@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="./dist/index.js"></script>
+<script type="text/ecmascript-6">
+//    thunk demo
+    function hw(h,w,cb) {
+        let hwg=h+" "+w+" "+"gcy";
+        cb(hwg);
+    }
+    let fn=ra.run.toTK(hw);
+    ra.run(function* () {
+        const msg0= yield fn('hello','world');
+        console.log("msg0 "+msg0); //hello world gcy //sync cb logic
+    });
+//    ---------------------------------------------------------------
+//    promise demo
+    let hwAsync= (h,w) => {
+    return new Promise((resolve,reject) => {
+                let hwg=h+" "+w+" "+"gcy";
+                    resolve(hwg);
+            });}
+
+    let hra=ra.runPromise(function* () {
+        console.log("begin");
+        let ret=yield hwAsync('hello','world');
+        console.log(ret);  //hello world gcy //sync cb logic
+    });
+    hra();
+</script>
+</html>
